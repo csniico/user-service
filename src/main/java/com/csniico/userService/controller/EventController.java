@@ -6,6 +6,7 @@ import com.csniico.userService.dto.UserRequest;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 @Data
 @RestController
@@ -13,12 +14,17 @@ import org.springframework.web.bind.annotation.*;
 public class EventController {
 
     private final UserServiceMessagePublisher publisher;
-
+    private  RestTemplate restTemplate;
     private final UserCRUDService userCRUDService;
 
-    public EventController(UserServiceMessagePublisher publisher, UserCRUDService userCRUDService) {
+    public EventController(
+            UserServiceMessagePublisher publisher,
+            UserCRUDService userCRUDService,
+            RestTemplate restTemplate
+    ) {
         this.publisher = publisher;
         this.userCRUDService = userCRUDService;
+        this.restTemplate = restTemplate;
     }
 
     @GetMapping("/")
