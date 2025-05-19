@@ -58,7 +58,8 @@ public class UserCRUDService {
             user.setFirstName(sanitizeInput(userRequest.getFirstName()));
             user.setLastName(sanitizeInput(userRequest.getLastName()));
             user.setEmail(userRequest.getEmail().trim().toLowerCase());
-            user.setPassword(hashPassword(userRequest.getPassword())); // You should implement proper password hashing
+            user.setPassword(hashPassword(userRequest.getPassword()));
+            user.setRole(userRequest.getRole());
 
             userRepository.save(user);
             return true;
@@ -105,6 +106,7 @@ public class UserCRUDService {
             user.setLastName(userRequest.getLastName());
             user.setEmail(userRequest.getEmail());
             user.setPassword(userRequest.getPassword());
+            user.setRole(userRequest.getRole());
             userRepository.save(user);
         }catch(Exception ex) {
             throw new RuntimeException(ex);

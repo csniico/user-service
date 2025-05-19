@@ -53,8 +53,8 @@ echo "Environment validation successful!"
 
 # Build the Docker image
 echo "Building Docker image..."
-docker build -t task-api .
+docker build -t user-service .
 
 # Run the container with environment variables
 echo "Running Docker container..."
-docker run --env-file .env -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} task-api
+docker run --env-file .env -p ${SERVER_PORT:-8080}:${SERVER_PORT:-8080} user-service

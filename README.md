@@ -35,7 +35,8 @@ All API responses adhere to a standard structure:
   "firstName": "John",     // optional
   "lastName": "Doe",       // optional
   "email": "john@example.com",   // required
-  "password": "password123"      // required
+  "password": "password123" ,     // required
+  "role": "user | admin"
 }
 ```
 
@@ -48,7 +49,8 @@ All API responses adhere to a standard structure:
     "id": 1,
     "firstName": "John",
     "lastName": "Doe",
-    "email": "john@example.com"
+    "email": "john@example.com",
+    "role": "admin | user"
   }
 }
 ```
@@ -83,7 +85,8 @@ All API responses adhere to a standard structure:
     "id": 1,
     "firstName": "John",
     "lastName": "Doe",
-    "email": "john@example.com"
+    "email": "john@example.com",
+    "role": "admin | user"
   }
 }
 ```
@@ -111,7 +114,8 @@ All API responses adhere to a standard structure:
       "id": 1,
       "firstName": "John",
       "lastName": "Doe",
-      "email": "john@example.com"
+      "email": "john@example.com",
+      "role": "admin | user"
     }
     // Additional users...
   ]
@@ -143,7 +147,8 @@ All API responses adhere to a standard structure:
     "id": 1,
     "firstName": "John",
     "lastName": "Doe",
-    "email": "john@example.com"
+    "email": "john@example.com",
+    "role": "admin | user"
   }
 }
 ```
@@ -168,7 +173,8 @@ All API responses adhere to a standard structure:
   "firstName": "John",            // optional
   "lastName": "Doe",              // optional
   "email": "john@example.com",    // optional
-  "password": "newpassword"       // optional
+  "password": "newpassword" ,      // optional
+  "role": "admin | user"
 }
 ```
 
@@ -181,7 +187,8 @@ All API responses adhere to a standard structure:
     "id": 1,
     "firstName": "John",
     "lastName": "Doe",
-    "email": "john@example.com"
+    "email": "john@example.com",
+    "role": "admin | user"
   }
 }
 ```
