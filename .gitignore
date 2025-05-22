@@ -25,3 +25,7 @@ replay_pid*
 
 .env
 *.jar
+*.tar
+
+buildAndRunImage.sh
+push.sh
