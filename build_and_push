@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -e
-
-docker build -t chrisncs/user-service:1.2 .
-docker build -t chrisncs/user-service:latest .
-
-docker push chrisncs/user-service:1.2
-docker push chrisncs/user-service:latest
